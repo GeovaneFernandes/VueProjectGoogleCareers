@@ -1,3 +1,3 @@
 <template>
-  <h1 class="mt-50 font-display">Hello Vue2</h1>
+  <h1 class="text-center mt-8 text-6xl">Hello Vue</h1>
 </template>

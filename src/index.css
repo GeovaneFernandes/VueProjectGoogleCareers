@@ -4,3 +4,7 @@
 @theme {
   --font-display: 'Open Sans', serif;
 }
+
+:root {
+  font-family: var(--font-display);
+}
