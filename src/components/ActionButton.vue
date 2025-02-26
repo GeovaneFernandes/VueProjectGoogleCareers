@@ -1,6 +1,7 @@
 <template>
   <button
-    class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue"
+    class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue-1"
+    v-on:click="handleClick()"
   >
     Sign In
   </button>
@@ -9,5 +10,10 @@
 <script>
 export default {
   name: 'ActionButton',
+  methods: {
+    handleClick() {
+      alert('Sign in clicked')
+    },
+  },
 }
 </script>

@@ -33,7 +33,7 @@ export default {
       company: 'Booble Careers',
       url: 'https://careers.google.com',
       menuItems: ['Teams', 'Locations', 'Life at Booble Career', 'How we hire', 'Students', 'Jobs'],
-      isLoggedIn: true,
+      isLoggedIn: false,
     }
   },
 }
