@@ -11,7 +11,8 @@
           </ul>
         </nav>
         <div class="ml-auto flex h-full items-center">
-          <ActionButton />
+          <ProfileImage v-if="isLoggedIn" />
+          <ActionButton v-else />
         </div>
       </div>
     </div>
@@ -20,16 +21,19 @@
 
 <script>
 import ActionButton from './ActionButton.vue'
+import ProfileImage from './ProfileImage.vue'
 export default {
   name: 'MainNav',
   components: {
     ActionButton,
+    ProfileImage,
   },
   data() {
     return {
       company: 'Booble Careers',
       url: 'https://careers.google.com',
       menuItems: ['Teams', 'Locations', 'Life at Booble Career', 'How we hire', 'Students', 'Jobs'],
+      isLoggedIn: true,
     }
   },
 }
