@@ -1,9 +1,9 @@
 <template>
   <button
-    class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue-1"
+    class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue"
     @:click="handleClick()"
   >
-    Sign In
+    {{ text }}
   </button>
 </template>
 
@@ -12,8 +12,9 @@ export default {
   name: 'ActionButton',
   methods: {
     handleClick() {
-      alert('Sign in clicked')
+      console.log('Sign in clicked')
     },
   },
+  props: ['text'],
 }
 </script>

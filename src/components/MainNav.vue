@@ -12,7 +12,7 @@
         </nav>
         <div class="ml-auto flex h-full items-center">
           <ProfileImage v-if="isLoggedIn" />
-          <ActionButton v-else />
+          <ActionButton v-else @click="loginUser" text="Sign In" />
         </div>
       </div>
     </div>
@@ -35,6 +35,11 @@ export default {
       menuItems: ['Teams', 'Locations', 'Life at Booble Career', 'How we hire', 'Students', 'Jobs'],
       isLoggedIn: false,
     }
+  },
+  methods: {
+    loginUser() {
+      this.isLoggedIn = true
+    },
   },
 }
 </script>
