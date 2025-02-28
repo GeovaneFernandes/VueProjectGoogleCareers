@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ secondary: true }" @click="handleClick()">
+  <button :class="buttonClass" @click="handleClick()">
     {{ text }}
   </button>
 </template>
@@ -13,6 +13,16 @@ export default {
     },
   },
   props: ['text'],
+  data() {
+    return {
+      primary: true,
+    }
+  },
+  computed: {
+    buttonClass() {
+      return { primary: this.primary, secondary: !this.primary }
+    },
+  },
 }
 </script>
 
@@ -39,8 +49,12 @@ button {
 
 .secondary {
   border: 0;
-  background-color: var(--color-brand-green-1);
-  color: white;
+  background-color: transparent;
+  color: var(--color-brand-blue-1);
   transition: box-shadow 0.2s;
+}
+.secondary:hover {
+  background-color: var(--color-brand-blue-2);
+  color: white;
 }
 </style>
